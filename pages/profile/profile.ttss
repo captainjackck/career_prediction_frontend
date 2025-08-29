@@ -1,0 +1,48 @@
+/* pages/profile/profile.ttss */
+.container {
+  padding: 40rpx;
+}
+.form-section-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+  margin-top: 50rpx;
+  margin-bottom: 30rpx;
+  border-left: 8rpx solid #3296fa;
+  padding-left: 20rpx;
+}
+.form-item {
+  width: 100%;
+  margin-bottom: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  box-shadow: 0 2rpx 5rpx rgba(0, 0, 0, 0.05);
+}
+.label {
+  width: 250rpx;
+  font-size: 32rpx;
+  color: #333;
+}
+.form-item input, .picker-text {
+  flex: 1;
+  font-size: 32rpx;
+  color: #666;
+  text-align: right;
+}
+.submit-btn {
+  width: 100%;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 36rpx;
+  margin-top: 50rpx;
+  border-radius: 8rpx;
+}
+switch {
+  transform: scale(0.8);
+  margin-left: auto;
+}

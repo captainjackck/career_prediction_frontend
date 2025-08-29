@@ -1,0 +1,13 @@
+{
+"pages": [
+    "pages/login/login",
+    "pages/register/register",
+    "pages/profile/profile",
+    "pages/result/result"
+  ],
+  "window": {
+    "navigationBarTitleText": "职业预测",
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#3296fa"
+  }
+}

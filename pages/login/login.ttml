@@ -1,0 +1,26 @@
+<view class="container">
+  <form bindsubmit="login">
+    <view class="form-item">
+      <text class="label">用户名</text>
+      <input name="username" type="text" placeholder="请输入用户名" />
+    </view>
+    <view class="form-item">
+      <text class="label">密码</text>
+      <input name="password" type="password" placeholder="请输入密码" />
+    </view>
+    <button form-type="submit" class="submit-btn">登录</button>
+  </form>
+
+  <view class="divider">
+    <text class="divider-text">或</text>
+  </view>
+
+  <button class="douyin-login-btn" bindtap="douyinLogin">
+    <image class="douyin-logo" src="/images/douyin_logo.png"></image>
+    <text>抖音授权登录</text>
+  </button>
+  
+  <view class="link-area">
+    <text bindtap="goToRegister">没有账号？去注册</text>
+  </view>
+</view>

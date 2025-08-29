@@ -1,0 +1,32 @@
+<view class="container">
+  <view tt:if="{{predictionResult}}" class="result-card">
+    <view class="result-title">
+      <text class="result-label">您的职业发展前景：</text>
+      <text class="predicted-outlook">{{predictionResult.predicted_outlook}}</text>
+    </view>
+
+    <view class="paths-section">
+      <view class="section-title">发展路径建议</view>
+      <view class="path-list">
+        <block tt:for="{{predictionResult.career_paths}}" tt:for-item="path" tt:key="index">
+          <view class="path-item">
+            <view class="path-name">{{path.name}}</view>
+            <view class="path-description">{{path.description}}</view>
+            <view class="behaviors-section">
+              <view class="section-subtitle">行为规范：</view>
+              <view class="behavior-list">
+                <block tt:for="{{path.behaviors}}" tt:for-item="behavior" tt:key="idx">
+                  <view class="behavior-item">- {{behavior}}</view>
+                </block>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view tt:else class="no-result">
+    <text>暂无预测结果，请先填写资料并进行预测。</text>
+    <button class="back-btn" bindtap="goToProfile">返回个人资料</button>
+  </view>
+</view>

@@ -1,0 +1,101 @@
+<view class="container">
+  <form bindsubmit="submitProfile">
+    <view class="form-section-title">基础信息</view>
+    <view class="form-item">
+      <text class="label">年龄</text>
+      <input name="age" type="number" placeholder="请输入年龄" value="{{profile.age}}" />
+    </view>
+    <view class="form-item">
+      <text class="label">性别</text>
+      <picker name="gender" data-name="gender" bindchange="onPickerChange" range="{{genderOptions}}">
+        <text class="picker-text">{{profile.gender || '请选择性别'}}</text>
+      </picker>
+    </view>
+    <view class="form-item">
+      <text class="label">婚姻状况</text>
+      <picker name="marital_status" data-name="marital_status" bindchange="onPickerChange" range="{{maritalStatusOptions}}">
+        <text class="picker-text">{{profile.marital_status || '请选择婚姻状况'}}</text>
+      </picker>
+    </view>
+    <view class="form-item">
+      <text class="label">子女情况</text>
+      <picker name="children_status" data-name="children_status" bindchange="onPickerChange" range="{{childrenStatusOptions}}">
+        <text class="picker-text">{{profile.children_status || '请选择子女情况'}}</text>
+      </picker>
+    </view>
+
+    <view class="form-section-title">职业与教育信息</view>
+    <view class="form-item">
+      <text class="label">职业</text>
+      <input name="occupation" type="text" placeholder="请输入职业" value="{{profile.occupation}}" />
+    </view>
+    <view class="form-item">
+      <text class="label">工作年限</text>
+      <input name="work_experience_years" type="number" placeholder="请输入工作年限" value="{{profile.work_experience_years}}" />
+    </view>
+    <view class="form-item">
+      <text class="label">学历</text>
+      <picker name="education_level" data-name="education_level" bindchange="onPickerChange" range="{{educationOptions}}">
+        <text class="picker-text">{{profile.education_level || '请选择学历'}}</text>
+      </picker>
+    </view>
+    <view class="form-item">
+      <text class="label">毕业院校</text>
+      <input name="graduated_university" type="text" placeholder="请输入毕业院校" value="{{profile.graduated_university}}" />
+    </view>
+    <view class="form-item">
+      <text class="label">所学专业</text>
+      <input name="major" type="text" placeholder="请输入所学专业" value="{{profile.major}}" />
+    </view>
+
+    <view class="form-section-title">财务与资产信息</view>
+    <view class="form-item">
+      <text class="label">年收入范围</text>
+      <picker name="income_range" data-name="income_range" bindchange="onPickerChange" range="{{incomeOptions}}">
+        <text class="picker-text">{{profile.income_range || '请选择收入范围'}}</text>
+      </picker>
+    </view>
+    <view class="form-item">
+      <text class="label">是否有房产</text>
+      <switch name="asset_type_house" checked="{{profile.asset_type_house}}" />
+    </view>
+    <view class="form-item">
+      <text class="label">是否有车产</text>
+      <switch name="asset_type_car" checked="{{profile.asset_type_car}}" />
+    </view>
+    <view class="form-item">
+      <text class="label">是否有投资</text>
+      <switch name="asset_type_investment" checked="{{profile.asset_type_investment}}" />
+    </view>
+
+    <view class="form-section-title">地理与兴趣信息</view>
+    <view class="form-item">
+      <text class="label">所在省份</text>
+      <input name="region_province" type="text" placeholder="请输入所在省份" value="{{profile.region_province}}" />
+    </view>
+    <view class="form-item">
+      <text class="label">所在城市</text>
+      <input name="region_city" type="text" placeholder="请输入所在城市" value="{{profile.region_city}}" />
+    </view>
+    <view class="form-item">
+      <text class="label">兴趣偏好</text>
+      <input name="douyin_content_preference" type="text" placeholder="如：科技, 财经" value="{{profile.douyin_content_preference}}" />
+    </view>
+    <view class="form-item">
+      <text class="label">互动频率</text>
+      <picker name="douyin_interaction_frequency" data-name="douyin_interaction_frequency" bindchange="onPickerChange" range="{{interactionOptions}}">
+        <text class="picker-text">{{profile.douyin_interaction_frequency || '请选择互动频率'}}</text>
+      </picker>
+    </view>
+    <view class="form-item">
+      <text class="label">薪资</text>
+      <input name="salary" type="text" placeholder="请输入薪资" value="{{profile.salary}}" />
+    </view>
+    <view class="form-item">
+      <text class="label">工作行业</text>
+      <input name="industry" type="text" placeholder="请输入工作行业" value="{{profile.industry}}" />
+    </view>
+
+    <button form-type="submit" class="submit-btn">保存并预测</button>
+  </form>
+</view>
